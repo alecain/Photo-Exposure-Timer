@@ -1,8 +1,9 @@
+
 CC=avr-gcc
 CFLAGS=-g -Os -Wall -mcall-prologues -mmcu=attiny13
 OBJ2HEX=avr-objcopy 
 UISP=avrdude 
-TARGET=beacon
+TARGET=Timer
 
 program : $(TARGET).hex
 	$(UISP) -c ponyser -p t13 -P /dev/ttyS0 -e
